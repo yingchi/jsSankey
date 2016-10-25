@@ -18,11 +18,18 @@
     <br>
     <input type="submit">
     </form>
-
 </div>
+
 <div id='fileNames'></div>
 <script>
-
+$(document).ready(function () 
+    {
+        $.get("/data/", function(data) 
+            {
+                $("#fileNames").append(data);
+        });
+    }
+}8
 function checkForm(form){ 
     var inputDate = form.filed1.value
     var inputID = form.filed2.value
