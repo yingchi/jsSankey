@@ -4,10 +4,10 @@ import os
 def process_data(f):
     """
     Read in the raw csv file and return a 3-column dataframe
-        | source | target | weight |
+        | source | target | value |
     the dataframe will be used for drawing the sankey chart
     """
-    df = pd.DataFrame(columns=['source', 'target', 'weight'])
+    df = pd.DataFrame(columns=['source', 'target', 'value'])
     i = 0
     file = open(f,'r')
     for line in file:
